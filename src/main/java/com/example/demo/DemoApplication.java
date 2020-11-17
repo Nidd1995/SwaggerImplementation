@@ -9,7 +9,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@EnableSwagger2
 public class DemoApplication {
 
     public static void main(String[] args)
@@ -18,10 +17,5 @@ public class DemoApplication {
     }
 
 
-    @Bean
-    public Docket productApi(){
-        return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.demo")).build();
 
-    }
 }

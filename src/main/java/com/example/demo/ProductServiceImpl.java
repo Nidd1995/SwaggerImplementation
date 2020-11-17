@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -18,5 +20,25 @@ public class ProductServiceImpl implements ProductService {
         logger.info("Inside createProduct service");
      productRepository.save(product);
 
+    }
+
+    @Override
+    public void getProduct(Integer id) {
+      logger.info("Result " +  productRepository.findById(id).toString());
+
+    }
+
+    @Override
+    public void updateProduct(Integer id, Product product) {
+      logger.info("Inside updateProduct service");
+      productRepository.save(product);
+    }
+
+    @Override
+    public void deleteProduct(Integer id) {
+     logger.info("Inside delete product service");
+     Optional<Product> product =   productRepository.findById(id);
+//     product.ifPresent()
+//      productRepository.delete(product);
     }
 }
