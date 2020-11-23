@@ -18,7 +18,7 @@ public class ExcelHelper {
 
 
     private static final String TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-    static String SHEET = "products";
+    static String SHEET = "product";
 
     public static boolean hasExcelFormat(MultipartFile file){
 

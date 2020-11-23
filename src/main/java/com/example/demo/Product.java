@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 public class Product {
 
     @Id
+    @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
